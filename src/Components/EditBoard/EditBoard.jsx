@@ -5,6 +5,7 @@ import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 import EditBoardbtns from "../EditBordBtns/EditBoardbtns.jsx";
+import EditBordBtnRight from "../EditBordBtnRight/EditBordBtnRight.jsx";
 
 const EditBoard = () => {
     const Buttons = [
@@ -52,7 +53,7 @@ const EditBoard = () => {
 
             {/* Buttons container */}
 
-            <div style={{ backgroundColor: '#1A1C20',borderRadius :"12px",padding:"10px"}}>
+            <div style={{ backgroundColor: '#1A1C20',borderRadius :"12px",padding:"15px"}}>
                 <Box sx={{display : "flex"}} >
                     <Button
                         sx={{
@@ -131,7 +132,10 @@ const EditBoard = () => {
                     </Button>
                 </Box>
                 {/*Rest of buttons  */}
-                <EditBoardbtns/>
+                <div style={{display : "flex" , flexDirection :"row" , justifyContent : "space-between"}} >
+                    <EditBoardbtns/>
+                    <EditBordBtnRight/>
+                </div>
             </div>
         </div>
     )

@@ -52,9 +52,11 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
 const EditBoardbtns = () => {
     return (
         <>
+        {/*Left block buttons starts*/}
+        <div style={{display : "flex" , flexDirection : "column"}} >
             {/*First block starts*/}
             <div>
-            <div style={{ display: 'flex',width : "40%" ,justifyContent :"space-between", marginTop: "3%"  }}>
+            <div style={{ display: 'flex',width : "145px" ,justifyContent :"space-between", marginTop: "5%"  }}>
                 <Typography sx={{ fontSize: 11, color: 'white'}}>
                     Font Color
                 </Typography>
@@ -63,19 +65,19 @@ const EditBoardbtns = () => {
                 </Stack>
             </div>
 
-            <Box sx={{ backgroundColor: '#2A2E31', display: "flex",p:0.2,borderRadius :"6px",width : "40%",marginTop : "2%",alignItems :" center" }}>
-                <SquareRoundedIcon sx={{color : "white"}}/>
-                <ColorizeRoundedIcon sx={{color : "white",ml:0.5,fontSize:14 ,backgroundColor :"#1A1C20",p:0.4,borderRadius:"3px"}}/>
-                <Typography sx={{color : "white",fontSize:14 ,ml:2,backgroundColor :"#1A1C20",pl:2,pr:1.5,borderRadius:"3px"}} >
-                    <span style={{color :"#5E6A85"}} >#</span>  fffffff
-                </Typography>
-            </Box>
-        </div>
+                <Box sx={{ backgroundColor: '#2A2E31', display: "flex",p:0.2,borderRadius :"6px",width : "145px",marginTop : "2%",alignItems :" center" }}>
+                    <SquareRoundedIcon sx={{color : "white"}}/>
+                    <ColorizeRoundedIcon sx={{color : "white",ml:0.5,fontSize:14 ,backgroundColor :"#1A1C20",p:0.4,borderRadius:"3px"}}/>
+                    <Typography sx={{color : "white",fontSize:14 ,ml:2,backgroundColor :"#1A1C20",pl:2,pr:1.5,borderRadius:"3px"}} >
+                        <span style={{color :"#5E6A85"}} >#</span>  fffffff
+                    </Typography>
+                </Box>
+            </div>
             {/*First block ends*/}
 
             {/*Second block starts*/}
         <div>
-            <div style={{ display: 'flex',width : "40%" ,justifyContent :"space-between", marginTop: "3%"  }}>
+            <div style={{ display: 'flex',width : "145px" ,justifyContent :"space-between", marginTop: "5%"  }}>
                 <Typography sx={{ fontSize: 11, color: 'white'}}>
                     Font Stroke
                 </Typography>
@@ -84,7 +86,7 @@ const EditBoardbtns = () => {
                 </Stack>
             </div>
 
-            <Box sx={{ backgroundColor: '#2A2E31',p:0.2,borderRadius :"6px",width : "40%",marginTop : "2%",alignItems :" center" }}>
+            <Box sx={{ backgroundColor: '#2A2E31',p:0.2,borderRadius :"6px",width : "145px",marginTop : "2%",alignItems :" center" }}>
                 <div style={{display:"flex"}}>
                     <SquareRoundedIcon sx={{color : "black"}}/>
                     <ColorizeRoundedIcon sx={{color : "white",ml:0.5,fontSize:14 ,backgroundColor :"#1A1C20",p:0.4,borderRadius:"3px"}}/>
@@ -117,7 +119,7 @@ const EditBoardbtns = () => {
 
             {/*Third block starts*/}
             <div>
-                <div style={{ display: 'flex',width : "40%" ,justifyContent :"space-between", marginTop: "3%"  }}>
+                <div style={{ display: 'flex',width : "145px" ,justifyContent :"space-between", marginTop: "5%"  }}>
                     <Typography sx={{ fontSize: 11, color: 'white'}}>
                         Animated
                     </Typography>
@@ -126,7 +128,7 @@ const EditBoardbtns = () => {
                     </Stack>
                 </div>
 
-                <Box sx={{ backgroundColor: '#2A2E31', display: "flex",p:0.2,borderRadius :"6px",width : "40%",marginTop : "2%",alignItems :" center" }}>
+                <Box sx={{ backgroundColor: '#2A2E31', display: "flex",p:0.2,borderRadius :"6px",width : "145px",marginTop : "2%",alignItems :" center" }}>
                     <SquareRoundedIcon sx={{color : "#FFB140"}}/>
                     <ColorizeRoundedIcon sx={{color : "white",ml:0.5,fontSize:14 ,backgroundColor :"#1A1C20",p:0.4,borderRadius:"3px"}}/>
                     <Typography sx={{color : "white",fontSize:12 ,ml:2,backgroundColor :"#1A1C20",pl:2,pr:1.5,borderRadius:"3px"}} >
@@ -135,7 +137,7 @@ const EditBoardbtns = () => {
 
                 </Box>
 
-                <Box sx={{ backgroundColor: '#2A2E31', display: "flex",p:0.2,borderRadius :"6px",width : "40%",marginTop : "2%",alignItems :" center" }}>
+                <Box sx={{ backgroundColor: '#2A2E31', display: "flex",p:0.2,borderRadius :"6px",width : "145px",marginTop : "2%",alignItems :" center" }}>
                     <SquareRoundedIcon sx={{color : "#6200FC"}}/>
                     <ColorizeRoundedIcon sx={{color : "white",ml:0.5,fontSize:14 ,backgroundColor :"#1A1C20",p:0.4,borderRadius:"3px"}}/>
                     <Typography sx={{color : "white",fontSize:12 ,ml:2,backgroundColor :"#1A1C20",pl:2,pr:1.5,borderRadius:"3px"}} >
@@ -145,6 +147,7 @@ const EditBoardbtns = () => {
                 </Box>
             </div>
             {/*Third block ends*/}
+        </div>
         </>
 )}
 export default EditBoardbtns
