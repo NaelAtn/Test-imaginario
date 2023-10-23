@@ -1,0 +1,22 @@
+#range-slider {
+    height: 28px;
+    background: url("../../assets/radio.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+
+#range-slider .range-slider__thumb {
+    width: 4px;
+    height: 28px;
+    border-radius: 3px;
+    background-color: #2816FA;
+}
+
+#range-slider .range-slider__range {
+    border-radius: 6px;
+    background: transparent;
+    border: 2px solid #2816FA;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, .75);
+}
