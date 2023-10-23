@@ -1,6 +1,6 @@
 import React from 'react'
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
-import Box from "@mui/material/Box";
+import {Box} from "@mui/material"
 import {Typography} from "@mui/material";
 import Button from '@mui/material/Button';
 import AddCircleIcon from '@mui/icons-material/AddCircle';

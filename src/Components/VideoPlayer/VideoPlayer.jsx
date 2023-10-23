@@ -1,7 +1,7 @@
 import React from 'react'
 import img from "../../assets/img.png";
-import Container from "@mui/material/Container";
 import {Typography} from "@mui/material";
+
 const VideoPlayer = () => {
     return (
         <div style={{ position: 'relative' }}>

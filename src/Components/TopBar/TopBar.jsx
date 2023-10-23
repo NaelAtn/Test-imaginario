@@ -1,5 +1,5 @@
 import React from 'react'
-import Box from "@mui/material/Box";
+import {Box} from "@mui/material"
 import Toolbar from "@mui/material/Toolbar";
 import {FormControl, IconButton, Menu, MenuItem, Typography} from "@mui/material";
 import PersonPinIcon from "@mui/icons-material/PersonPin.js";

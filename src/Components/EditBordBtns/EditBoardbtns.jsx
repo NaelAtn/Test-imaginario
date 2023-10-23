@@ -3,7 +3,8 @@ import {Typography} from "@mui/material";
 import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
-import SquareRoundedIcon from '@mui/icons-material/SquareRounded';import Box from '@mui/material/Box';
+import SquareRoundedIcon from '@mui/icons-material/SquareRounded'
+import {Box} from "@mui/material"
 import ColorizeRoundedIcon from '@mui/icons-material/ColorizeRounded';
 import "./EditBoardBtns.css"
 

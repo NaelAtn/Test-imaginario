@@ -1,5 +1,5 @@
 import React from 'react'
-import Box from '@mui/material/Box';
+import {Box} from "@mui/material"
 import SideBar from "../../Components/SideBar/SideBar.jsx";
 import UserInterface from "../../Components/UserInterface/UserInterface.jsx";
 

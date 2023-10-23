@@ -1,7 +1,5 @@
 import React from 'react'
-import Box from "@mui/material/Box";
 import EditBoard from "../EditBoard/EditBoard.jsx";
-import Container from "@mui/material/Container";
 import VideoPlayer from "../VideoPlayer/VideoPlayer.jsx";
 
 const EditVideo = () => {
