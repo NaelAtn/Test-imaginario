@@ -59,15 +59,15 @@ const EditBoardBtnsRight = () => {
 
                 {/*ajust text buttons*/}
                 <Box  sx={{color : "white", mt : "8%" ,mb:"5%" , width : "135px",display : "flex" , justifyContent :"space-around" }}>
-                    <FormatAlignLeftIcon sx={{fontSize :18}} />
-                    <FormatAlignCenterIcon sx={{fontSize :18}}/>
-                    <FormatAlignRightIcon sx={{fontSize :18}}/>
+                    <FormatAlignLeftIcon sx={{fontSize :18,cursor : "pointer","&:hover": {color:"#6200FC"} }}/>
+                    <FormatAlignCenterIcon sx={{fontSize :18,cursor : "pointer","&:hover": {color:"#6200FC"} }}/>
+                    <FormatAlignRightIcon sx={{fontSize :18,cursor : "pointer","&:hover": {color:"#6200FC"} }}/>
                 </Box>
                 {/*second box ajust text buttons*/}
                 <Box  sx={{color : "white", mt : "5%" ,mb:"5%" , width : "135px",display : "flex" , justifyContent :"space-around" }}>
-                    <FormatAlignLeftIcon sx={{fontSize :18}} />
-                    <FormatAlignCenterIcon sx={{fontSize :18}}/>
-                    <FormatAlignRightIcon sx={{fontSize :18}}/>
+                    <FormatAlignLeftIcon sx={{fontSize :18,cursor : "pointer","&:hover": {color:"#6200FC"} }} />
+                    <FormatAlignCenterIcon sx={{fontSize :18,cursor : "pointer","&:hover": {color:"#6200FC"} }}/>
+                    <FormatAlignRightIcon sx={{fontSize :18,cursor : "pointer","&:hover": {color:"#6200FC"} }}/>
                 </Box>
 
                 {/*Font shadow button*/}

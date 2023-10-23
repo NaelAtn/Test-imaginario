@@ -7,7 +7,7 @@ import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 import EditBoardbtns from "../EditBordBtns/EditBoardbtns.jsx";
 import EditBordBtnRight from "../EditBordBtnRight/EditBordBtnRight.jsx";
 
-const EditBoard = () => {
+const EditBoard = ({setShowText,showText,showBackground,setShowBackground}) => {
     const Buttons = [
         {
             text :"Edit",
@@ -133,7 +133,7 @@ const EditBoard = () => {
                 </Box>
                 {/*Rest of buttons  */}
                 <div style={{display : "flex" , flexDirection :"row" , justifyContent : "space-between"}} >
-                    <EditBoardbtns/>
+                    <EditBoardbtns setShowText={setShowText} showText={showText} showBackground={showBackground} setShowBackground={setShowBackground} />
                     <EditBordBtnRight/>
                 </div>
             </div>

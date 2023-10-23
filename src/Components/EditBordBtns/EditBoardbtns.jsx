@@ -49,7 +49,13 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
         boxSizing: 'border-box',
     },
 }));
-const EditBoardbtns = () => {
+const EditBoardbtns = ({setShowText,showText,showBackground,setShowBackground}) => {
+    const handleShowText = () =>{
+        setShowText(!showText)
+    }
+    const handleShowBackground = () =>{
+        setShowBackground(!showBackground)
+    }
     return (
         <>
         {/*Left block buttons starts*/}
@@ -61,7 +67,7 @@ const EditBoardbtns = () => {
                     Font Color
                 </Typography>
                 <Stack direction="row" spacing={1} alignItems="center">
-                    <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
+                    <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} onClick={handleShowBackground} />
                 </Stack>
             </div>
 
@@ -81,8 +87,8 @@ const EditBoardbtns = () => {
                 <Typography sx={{ fontSize: 11, color: 'white'}}>
                     Font Stroke
                 </Typography>
-                <Stack direction="row" spacing={1} alignItems="center">
-                    <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
+                <Stack direction="row" spacing={1} alignItems="center"  >
+                    <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} onClick={handleShowText} />
                 </Stack>
             </div>
 
