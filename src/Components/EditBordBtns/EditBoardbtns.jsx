@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Typography} from "@mui/material";
 import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
@@ -7,6 +7,8 @@ import SquareRoundedIcon from '@mui/icons-material/SquareRounded'
 import {Box} from "@mui/material"
 import ColorizeRoundedIcon from '@mui/icons-material/ColorizeRounded';
 import "./EditBoardBtns.css"
+import { SketchPicker } from 'react-color';
+import { IconButton } from '@mui/material';
 
 const AntSwitch = styled(Switch)(({ theme }) => ({
     width: 28,
@@ -49,13 +51,20 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
         boxSizing: 'border-box',
     },
 }));
-const EditBoardbtns = ({setShowText,showText,showBackground,setShowBackground}) => {
+const EditBoardbtns = ({setShowText,showText,showBackground,setShowBackground,selectedColor, setSelectedColor}) => {
     const handleShowText = () =>{
         setShowText(!showText)
     }
     const handleShowBackground = () =>{
         setShowBackground(!showBackground)
     }
+
+    const [openSkethc,setOpenSkethc] = useState(false)
+
+    const handleColorChange = (color) => {
+        setSelectedColor(color.hex);
+    };
+
     return (
         <>
         {/*Left block buttons starts*/}
@@ -72,10 +81,16 @@ const EditBoardbtns = ({setShowText,showText,showBackground,setShowBackground}) 
             </div>
 
                 <Box sx={{ backgroundColor: '#2A2E31', display: "flex",p:0.2,borderRadius :"6px",width : "145px",marginTop : "2%",alignItems :" center" }}>
-                    <SquareRoundedIcon sx={{color : "white"}}/>
+                    <SquareRoundedIcon sx={{color : selectedColor,cursor : "pointer"}} onClick={()=>setOpenSkethc(!openSkethc)} />
+                    {
+                        openSkethc ?
+                            <div style={{position :"absolute",zIndex:4,marginLeft:"10%"}} >
+                                <SketchPicker color={selectedColor} onChange={handleColorChange} />                            </div> :
+                            null
+                    }
                     <ColorizeRoundedIcon sx={{color : "white",ml:0.5,fontSize:14 ,backgroundColor :"#1A1C20",p:0.4,borderRadius:"3px"}}/>
                     <Typography sx={{color : "white",fontSize:14 ,ml:2,backgroundColor :"#1A1C20",pl:2,pr:1.5,borderRadius:"3px"}} >
-                        <span style={{color :"#5E6A85"}} >#</span>  fffffff
+                        <span style={{color :"#5E6A85"}} >#</span>{selectedColor}
                     </Typography>
                 </Box>
             </div>

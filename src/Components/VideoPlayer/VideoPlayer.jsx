@@ -2,7 +2,7 @@ import React from 'react'
 import img from "../../assets/img.png";
 import {Typography} from "@mui/material";
 
-const VideoPlayer = ({showText,showBackground}) => {
+const VideoPlayer = ({showText,showBackground,selectedColor}) => {
     return (
         <div style={{ position: 'relative' }}>
             <img src={img} alt="img" width="600px"  style={{ marginLeft: '2%' }} />
@@ -17,11 +17,12 @@ const VideoPlayer = ({showText,showBackground}) => {
                     top: '85%',
                     left: '52.5%',
                     transform: 'translate(-50%, -50%)',
-                    fontSize : 13
+                    fontSize : 13,
+                    fontWeight : 'bold',
                 }}>
                 {
                     showText ?
-                        <span>
+                        <span style={{color : selectedColor}} >
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit
                         </span>
                         :

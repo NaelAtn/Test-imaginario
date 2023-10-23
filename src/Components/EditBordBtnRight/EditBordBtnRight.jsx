@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Typography} from "@mui/material";
 import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
@@ -9,6 +9,7 @@ import ColorizeRoundedIcon from '@mui/icons-material/ColorizeRounded';
 import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+
 
 const AntSwitch = styled(Switch)(({ theme }) => ({
     width: 28,
@@ -83,7 +84,7 @@ const EditBoardBtnsRight = () => {
 
                     <Box sx={{ backgroundColor: '#2A2E31',p:0.2,borderRadius :"6px",width : "145px",marginTop : "2%",alignItems :" center" }}>
                         <div style={{display:"flex"}}>
-                            <SquareRoundedIcon sx={{color : "black"}}/>
+                            <SquareRoundedIcon sx={{color : "black"}} />
                             <ColorizeRoundedIcon sx={{color : "white",ml:0.5,fontSize:14 ,backgroundColor :"#1A1C20",p:0.4,borderRadius:"3px"}}/>
                             <Typography sx={{color : "white",fontSize:12 ,ml:2,backgroundColor :"#1A1C20",pl:2,pr:1.5,borderRadius:"3px"}} >
                                 <span style={{color :"#5E6A85"}} >#</span> 00000

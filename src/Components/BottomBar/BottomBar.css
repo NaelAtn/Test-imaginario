@@ -1,7 +1,6 @@
 #range-slider {
     height: 28px;
     background: url("../../assets/radio.png");
-    background-repeat: no-repeat;
     background-size: contain;
     overflow: hidden;
 }
@@ -19,4 +18,12 @@
     border: 2px solid #2816FA;
     box-sizing: border-box;
     box-shadow: 0 0 0 9999px rgba(0, 0, 0, .75);
+}
+
+.red-bar::-moz-range-thumb {
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0; /*Removes default border-radius that FF applies*/
+    background-color: red;
+    height: 45px;
+    width: 2px;
 }
