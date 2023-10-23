@@ -1,0 +1,7 @@
+.slider::-moz-range-thumb {
+    appearance: none;
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    cursor: pointer;
+}
