@@ -8,7 +8,6 @@ import {Box} from "@mui/material"
 import ColorizeRoundedIcon from '@mui/icons-material/ColorizeRounded';
 import "./EditBoardBtns.css"
 import { SketchPicker } from 'react-color';
-import { IconButton } from '@mui/material';
 
 const AntSwitch = styled(Switch)(({ theme }) => ({
     width: 28,
@@ -65,6 +64,11 @@ const EditBoardbtns = ({setShowText,showText,showBackground,setShowBackground,se
         setSelectedColor(color.hex);
     };
 
+    const [fontStroke, setFontStroke] = useState(50)
+    const handleFontStrokeChange = (e) => {
+        setFontStroke(e.target.value);
+    };
+
     return (
         <>
         {/*Left block buttons starts*/}
@@ -85,12 +89,13 @@ const EditBoardbtns = ({setShowText,showText,showBackground,setShowBackground,se
                     {
                         openSkethc ?
                             <div style={{position :"absolute",zIndex:4,marginLeft:"10%"}} >
-                                <SketchPicker color={selectedColor} onChange={handleColorChange} />                            </div> :
+                                <SketchPicker color={selectedColor} onChange={handleColorChange} />
+                            </div> :
                             null
                     }
                     <ColorizeRoundedIcon sx={{color : "white",ml:0.5,fontSize:14 ,backgroundColor :"#1A1C20",p:0.4,borderRadius:"3px"}}/>
-                    <Typography sx={{color : "white",fontSize:14 ,ml:2,backgroundColor :"#1A1C20",pl:2,pr:1.5,borderRadius:"3px"}} >
-                        <span style={{color :"#5E6A85"}} >#</span>{selectedColor}
+                    <Typography sx={{color : "#5E6A85",fontSize:14 ,ml:2,backgroundColor :"#1A1C20",pl:2,pr:1.5,borderRadius:"3px"}} >
+                        {selectedColor}
                     </Typography>
                 </Box>
             </div>
@@ -124,7 +129,8 @@ const EditBoardbtns = ({setShowText,showText,showBackground,setShowBackground,se
                         type="range"
                         min="1"
                         max="100"
-                        value="50"
+                        value={fontStroke}
+                        onChange={handleFontStrokeChange}
                         className="slider"
                         style={{
                             width: "60%",

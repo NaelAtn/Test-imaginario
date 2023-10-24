@@ -53,6 +53,11 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
     },
 }));
 const EditBoardBtnsRight = () => {
+
+    const [fontStroke, setFontStroke] = useState(50)
+    const handleFontStrokeChange = (e) => {
+        setFontStroke(e.target.value);
+    };
     return (
         <>
             {/*Right block buttons starts*/}
@@ -99,7 +104,8 @@ const EditBoardBtnsRight = () => {
                                 type="range"
                                 min="1"
                                 max="100"
-                                value="50"
+                                value={fontStroke}
+                                onChange={handleFontStrokeChange}
                                 className="slider"
                                 style={{
                                     width: "60%",

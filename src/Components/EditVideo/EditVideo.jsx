@@ -16,7 +16,11 @@ const EditVideo = () => {
                 selectedColor={selectedColor}
                 setSelectedColor={setSelectedColor}
             />
-            <VideoPlayer showText={showText} showBackground={showBackground} selectedColor={selectedColor} />
+            <VideoPlayer
+                showText={showText}
+                showBackground={showBackground}
+                selectedColor={selectedColor}
+            />
         </div>
     )
 }
